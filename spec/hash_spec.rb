@@ -25,7 +25,18 @@ describe HashItem do
     it 'returns true if the hash contains the searched key' do
       expect(hash_item.has_key?("b")).to be(true)
     end
+
+    it 'returns false if the hash does not contains the searched key' do
+      expect(hash_item.has_key?("z")).to be(false)
+    end
   end
-     
+  
+  describe '#remove' do
+    it 'removes an entry stored at the searched key' do
+      hash_item.remove("b")
+      expect(hash_item.hash).to eq({"a" => 1, "c" => 3})
+    end
+  end
+
 
 end
