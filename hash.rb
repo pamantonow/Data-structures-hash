@@ -24,8 +24,11 @@
       return false
     end
   end
+
+  def remove(key)
+    return @hash.delete(key)
+  end
  
 
 end
 
-new_hash = HashItem.new(:a => 1 , :b => 2, :c => 3 )
